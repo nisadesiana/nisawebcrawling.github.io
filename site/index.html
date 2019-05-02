@@ -1,0 +1,481 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Nisa Desiana Web Crawling</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.750b69bd.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#web-crawling-menggunakan-python" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="Nisa Desiana Web Crawling" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Nisa Desiana Web Crawling
+            </span>
+            <span class="md-header-nav__topic">
+              Perkenalan
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="." title="Nisa Desiana Web Crawling" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Nisa Desiana Web Crawling
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Perkenalan
+      </label>
+    
+    <a href="." title="Perkenalan" class="md-nav__link md-nav__link--active">
+      Perkenalan
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web-crawling-menggunakan-python" title="Web Crawling Menggunakan Python" class="md-nav__link">
+    Web Crawling Menggunakan Python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perkenalan" title="Perkenalan" class="md-nav__link">
+    Perkenalan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-web-crawler" title="Apa itu Web Crawler?" class="md-nav__link">
+    Apa itu Web Crawler?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-python-dan-beautifulsoup4" title="Apa itu Python dan Beautifulsoup4?" class="md-nav__link">
+    Apa itu Python dan Beautifulsoup4?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="crawl/" title="Crawling" class="md-nav__link">
+      Crawling
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="preprocessing/" title="Preprocessing" class="md-nav__link">
+      Preprocessing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="viesem/" title="VSM" class="md-nav__link">
+      VSM
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="tfidf/" title="TFxIDF" class="md-nav__link">
+      TFxIDF
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="seleksifitur/" title="Seleksi Fitur" class="md-nav__link">
+      Seleksi Fitur
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="clustering/" title="K-Mean Clustering" class="md-nav__link">
+      K-Mean Clustering
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="kesimpulan/" title="Kesimpulan" class="md-nav__link">
+      Kesimpulan
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web-crawling-menggunakan-python" title="Web Crawling Menggunakan Python" class="md-nav__link">
+    Web Crawling Menggunakan Python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perkenalan" title="Perkenalan" class="md-nav__link">
+    Perkenalan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-web-crawler" title="Apa itu Web Crawler?" class="md-nav__link">
+    Apa itu Web Crawler?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-python-dan-beautifulsoup4" title="Apa itu Python dan Beautifulsoup4?" class="md-nav__link">
+    Apa itu Python dan Beautifulsoup4?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Perkenalan</h1>
+                
+                <h2 id="web-crawling-menggunakan-python">Web Crawling Menggunakan Python</h2>
+<h3 id="perkenalan">Perkenalan</h3>
+<p>Nama                : Nisa Desiana</p>
+<p>NIM             : 160411100129</p>
+<p>Fakultas / Jurusan      : Teknik / Teknik Informatika</p>
+<p>Perguruan Tinggi        : Universitas Trunojoyo Madura</p>
+<p>Tutorial ini dibuat untuk memenuhi tugas Mata Kuliah "Penambangan dan Pencarian Web" yang dibimbing oleh Dosen Bapak <a href="https://forlap.ristekdikti.go.id/dosen/detail/RTA5QTg4RjctMjBEQy00QThELUI4REYtREQ5ODAzMzU0MjUz">Mulaab, S.Si., M.Kom.</a> </p>
+<h3 id="apa-itu-web-crawler"><u>Apa itu Web Crawler?</u></h3>
+<p>Web crawler merupakan suatu program yang digunakan search engine untuk menjelajahi web yang ada di internet. Web crawler biasa digunakan untuk membuat salinan sebagian atau keseluruhan halaman web. Web crawler juga digunakan untuk memperoleh data yang khusus. Crawl digunakan untuk mengambil data yang bisa berupa text, citra, audio, video, dll.</p>
+<h3 id="apa-itu-python-dan-beautifulsoup4"><u>Apa itu Python dan Beautifulsoup4?</u></h3>
+<p>​   Python merupakan bahasa pemrograman tingkat tinggi yang dibuat oleh Guido van Rossum. Python juga dikenal dengan bahasa pemrograman yang mudah dipelajari, karena struktur sintaknya rapi dan mudah dipahami. Python memiliki banyak library(fitur) untuk menyelesaikan suatu permasalahan. Python banyak digunakan untuk membuat berbagai macam program, seperti: program CLI, Program GUI (desktop), Aplikasi Mobile, Web, IoT, Game, Program untuk Hacking, dsb.</p>
+<p>​   Beautiful Soup adalah library di python untuk menarik data yang ada di HTML. Sebelum saya mengenal Beautiful Soup atau teknik scraping, saya hanya meng-copy-paste data table yang ada di web lalu di pindahkan ke excel. namun proses tersebut tentu sangat tidak efisien. Selain library Beautiful Soup, ada juga scrapy yang fungsinya hampir sama. Hanya berbeda dari segi teknik pemakaian dan kebutuhan.</p>
+<ul>
+<li>Website yang di Crawl: http://www.tentangsinopsis.com</li>
+<li>Python 3.5 yang menggunakan library bawaannya yaitu:</li>
+<li>requests</li>
+<li>BeautifulSoup4</li>
+<li>SQLite3</li>
+<li>numpy</li>
+<li>csv</li>
+<li>sastrawi</li>
+<li>scikit-learn (untuk install numpy dan scipy terlebih dulu)</li>
+<li>Scikit-fuzzy (perlu untuk install numpy dan scipy terlebih dulu)</li>
+</ul>
+<blockquote>
+<p>Web Crawling hanya dapat dilakukan jika komputer terkoneksi dengan jaringan internet.</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="crawl/" title="Crawling" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Crawling
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.39abc4af.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>
