@@ -36,7 +36,7 @@
     
     
       
-        <title>TFxIDF - Nisa Desiana Web Crawling</title>
+        <title>Crawling - Nisa Desiana Web Crawling</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tf-x-idf" tabindex="1" class="md-skip">
+      <a href="#crawling" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -100,7 +100,7 @@
               Nisa Desiana Web Crawling
             </span>
             <span class="md-header-nav__topic">
-              TFxIDF
+              Crawling
             </span>
           
         </div>
@@ -166,12 +166,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Web Content Mining
@@ -235,20 +233,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="TFxIDF" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../tfidf/" title="TFxIDF" class="md-nav__link">
       TFxIDF
     </a>
-    
   </li>
 
         
@@ -297,10 +286,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Web Structure Mining
@@ -328,11 +319,45 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Crawling/" title="Crawling" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Crawling
+      </label>
+    
+    <a href="./" title="Crawling" class="md-nav__link md-nav__link--active">
       Crawling
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crawling" title="Crawling" class="md-nav__link">
+    Crawling
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -379,8 +404,22 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crawling" title="Crawling" class="md-nav__link">
+    Crawling
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -393,49 +432,105 @@
               
                 
                 
-                <h1 id="tf-x-idf">TF x IDF</h1>
-<p>TF IDF merupakan dua statistik data yang terdiri dari <em>Term-Frequency</em> dan <em>Inverse Data-Frequency</em>. Rumus TF-IDF sendiri terbilang mudah karena hanya TFxIDF.</p>
+                  <h1>Crawling</h1>
+                
+                <h2 id="crawling">Crawling</h2>
+<p>Tools yang digunakan untuk Web Structure Mining sama dengan Web Mining <a href="https://github.com/nisadesiana/nisawebcrawling.github.io">klik disini</a> , lalu ditambah bebera tools baru yaitu:</p>
 <ol>
-<li>Menghitung TF</li>
+<li>
+<p>Pandas : berfungsi untuk memuat file ke dalam tabel Virtual yang disimpan pada RAM. Pandas dapat mengolah suatu data dan mengolahnya seperti <em>join</em>, <em>distinct</em>, <em>group by</em>, agregasi, dan teknik seperti pada SQL.</p>
+</li>
+<li>
+<p>networkx :  merupakan library Python untuk pembuatan, manipulasi, dan studi tentang struktur, dinamika, dan fungsi jaringan yang kompleks.</p>
+</li>
+<li>
+<p>matplotlib : merupakan suatu <em>library</em> paling banyak digunakan oleh <em>data science</em> untuk menyajikan datanya ke dalam visual yang lebih baik. Terdapat <em>plot</em> untuk menampilkan data secara 2D atau 3D.</p>
+</li>
 </ol>
-<p>TF sama dengan VSM yaitu menghitung frekuensi kemunculan kata pada setiap data.</p>
-<ol>
-<li>Menghitung IDF</li>
-</ol>
-<p>Nilai kemunculan tiap kata (fitur) berapa kali dalam semua data.</p>
-<pre><code class="python">df = list()
-total_doc = bow.shape[0]
-for kolom in range(len(bow[0])):
-    total = 0
-    for baris in range(len(bow)):
-        if (bow[baris, kolom] &gt; 0):
-            total +=1
-    df.append(total)
-df = np.array(df)
+<p><b>Website yang dicrawl : http://teknik.trunojoyo.ac.id/</b></p>
+<p>Tahap crawling beserta code</p>
+<ul>
+<li>Import tools</li>
+</ul>
+<p><code>python
+  import pandas as pd
+  import requests
+  from bs4 import BeautifulSoup
+  import matplotlib.pyplot as plt
+  import networkx as nx</code></p>
+<ul>
+<li>Melakukan filtering link</li>
+</ul>
+<p><code>python
+  def checkURL(url):
+      if "www." in url:
+          ind = url.index("www.")+4
+          url = url[ind:]
+      if not "http" in url:
+          url = "http://"+url
+      if url[-1] == "/":
+          url = url[:-1]
+      return url</code>
+  Kondisi pertama: untuk menambahkan "http://" pada link dengan index awal "www."</p>
+<p>Kondisi kedua: untuk menambahkan "http://" pada link</p>
+<p>Kondisi ketiga: untuk mengecek "/" di akhir link atau link[-1]="/", maka ambil link dari index link[-1] sampai index awal link atau link=link[:-1].</p>
+<ul>
+<li>Pengambilan seluruh link pada website</li>
+</ul>
+<p>```python
+  def getAllLinks(src):
+      try:
+          page = requests.get(src)
+        soup = BeautifulSoup(page.content, 'html.parser')</p>
+<pre><code>  tags = soup.findAll("a")
 
-idf = list()
-for i in df:
-    tmp = 1 + log10(total_doc/(1+i))
-    idf.append(tmp)
-idf = np.array(idf)
-
-tfidf = bow * idf
-
-with open('tfidfsinopsis.csv', mode='w') as employee_file:
-    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='&quot;', quoting=csv.QUOTE_MINIMAL)
-    employee_writer.writerow(katadasar)
-    for i in tfidf:
-        employee_writer.writerow(i)
+  links = []
+  for tag in tags:
+      try:
+          link = tag['href']
+          if not link in links and 'http' in link:
+              links.append(link)
+      except KeyError:
+          pass
+  return links
 </code></pre>
+<p>except:
+      return list()</p>
+<p>root = "http://teknik.trunojoyo.ac.id/"
+  nodelist = [root]
+  edgelist = []
+  ```</p>
+<ul>
+<li>Crawl Data</li>
+</ul>
+<p>max_deep=Maksimal kedalaman, show=untuk menampilkan proses crwal, deep=0 merupakan kedealaman kedalam awal untuk memulai crawling, dan done[] merupakan list penampung link yang sudah di ambil</p>
+<p>```python
+  def crawl(url, max_deep,  show=False, deep=0, done=[]):
+      global edgelist
+      deep += 1</p>
+<pre><code>  url = checkURL(url)
 
-<p>Rumus TF IDF sendiri hanya <code>tfidf = bow * idf</code> , dimana nilai IDF didapatkan dari perhitungan <code>1 + log10(total_doc/(1+i))</code></p>
-<p>Lalu hasil perhitungan dieksport ke dalam bentuk CSV menggunakan program berikut:</p>
-<pre><code class="python">with open('tfidfsinopsis.csv', mode='w') as employee_file:
-    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='&quot;', quoting=csv.QUOTE_MINIMAL)
-    employee_writer.writerow(katadasar)
-    for i in tfidf:
-        employee_writer.writerow(i)
+  if not url in done:
+      links = getAllLinks(url)
+      done.append(url)
+      if show:
+          if deep == 1:
+              print(url)
+          else:
+              print("|", end="")
+              for i in range(deep-1): print("--", end="")
+              print("(%d)%s" %(len(links),url))
+
+      for link in links:
+          link = checkURL(link)
+          edge = (url,link)
+          if not edge in edgelist:
+              edgelist.append(edge)
+          if (deep != max_deep):
+              crawl(link, max_deep, show, deep, done)
 </code></pre>
+<p><code>``
+  kondisi</code>if not url in done` dibuat untuk melakukan pengecekan agar link yang sudah pernah dicrawl tidak dimasukkan pada edgelist.</p>
                 
                   
                 
@@ -456,7 +551,7 @@ with open('tfidfsinopsis.csv', mode='w') as employee_file:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../viesem/" title="VSM" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Pendahuluan/" title="Pendahuluan" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -465,19 +560,19 @@ with open('tfidfsinopsis.csv', mode='w') as employee_file:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                VSM
+                Pendahuluan
               </span>
             </div>
           </a>
         
         
-          <a href="../seleksifitur/" title="Seleksi Fitur" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Graph/" title="Graph" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Seleksi Fitur
+                Graph
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

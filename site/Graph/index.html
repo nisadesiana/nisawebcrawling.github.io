@@ -36,7 +36,7 @@
     
     
       
-        <title>TFxIDF - Nisa Desiana Web Crawling</title>
+        <title>Graph - Nisa Desiana Web Crawling</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tf-x-idf" tabindex="1" class="md-skip">
+      <a href="#graph" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -100,7 +100,7 @@
               Nisa Desiana Web Crawling
             </span>
             <span class="md-header-nav__topic">
-              TFxIDF
+              Graph
             </span>
           
         </div>
@@ -166,12 +166,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Web Content Mining
@@ -235,20 +233,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="TFxIDF" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../tfidf/" title="TFxIDF" class="md-nav__link">
       TFxIDF
     </a>
-    
   </li>
 
         
@@ -297,10 +286,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Web Structure Mining
@@ -340,11 +331,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Graph/" title="Graph" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Graph" class="md-nav__link md-nav__link--active">
       Graph
     </a>
+    
   </li>
 
         
@@ -393,49 +393,22 @@
               
                 
                 
-                <h1 id="tf-x-idf">TF x IDF</h1>
-<p>TF IDF merupakan dua statistik data yang terdiri dari <em>Term-Frequency</em> dan <em>Inverse Data-Frequency</em>. Rumus TF-IDF sendiri terbilang mudah karena hanya TFxIDF.</p>
-<ol>
-<li>Menghitung TF</li>
-</ol>
-<p>TF sama dengan VSM yaitu menghitung frekuensi kemunculan kata pada setiap data.</p>
-<ol>
-<li>Menghitung IDF</li>
-</ol>
-<p>Nilai kemunculan tiap kata (fitur) berapa kali dalam semua data.</p>
-<pre><code class="python">df = list()
-total_doc = bow.shape[0]
-for kolom in range(len(bow[0])):
-    total = 0
-    for baris in range(len(bow)):
-        if (bow[baris, kolom] &gt; 0):
-            total +=1
-    df.append(total)
-df = np.array(df)
-
-idf = list()
-for i in df:
-    tmp = 1 + log10(total_doc/(1+i))
-    idf.append(tmp)
-idf = np.array(idf)
-
-tfidf = bow * idf
-
-with open('tfidfsinopsis.csv', mode='w') as employee_file:
-    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='&quot;', quoting=csv.QUOTE_MINIMAL)
-    employee_writer.writerow(katadasar)
-    for i in tfidf:
-        employee_writer.writerow(i)
+                <h1 id="graph">Graph</h1>
+<p><strong>Teori graph</strong> atau <strong>teori grafik</strong> dalam matematika dan ilmu komputeradalah cabang kajian yang mempelajari sifat-sifat <a href="https://id.wikipedia.org/wiki/Graf">"graf" atau "grafik"</a>. suatu <a href="https://id.wikipedia.org/wiki/Graf">graf</a> adalah himpunan benda-benda yang disebut "simpul"(<em>vertex</em> atau <em>node</em>) yang terhubung oleh "sisi" (<em>edge</em>) atau "busur" (<em>arc</em>). Biasanya graf digambarkan sebagai kumpulan titik-titik (melambangkan "simpul") yang dihubungkan oleh garis-garis (melambangkan "sisi") atau garis berpanah (melambangkan "busur"). Suatu sisi dapat menghubungkan suatu simpul dengan simpul yang sama. Sisi yang demikian dinamakan "gelang"(<em>loop</em>).</p>
+<p><img alt="333px-6n-graf.svg" src="C:\Users\asus\AppData\Local\Programs\Python\Python35\my-project\docs\img\333px-6n-graf.svg.png" /></p>
+<p>Banyak sekali struktur yang bisa direpresentasikan dengan graf, dan banyak masalah yang bisa diselesaikan dengan bantuan graf. Jaringan persahabatan pada Facebook bisa direpresentasikan dengan graf, yakni simpul-simpulnya adalah para pengguna Facebook dan ada sisi antar pengguna jika dan hanya jika mereka berteman. Perkembangan algoritma untuk menangani graf akan berdampak besar bagi ilmu komputer.</p>
+<p>Berikut code untuk menggambar graph menggunakan  networkx dan Matplotlib.</p>
+<pre><code class="python">g = nx.from_pandas_edgelist(edgelistBox, &quot;From&quot;, &quot;To&quot;, None, nx.DiGraph())
+pos = nx.spring_layout(g)
+nx.draw(g, pos)
+nx.draw_networkx_labels(g, pos, label, font_color=&quot;w&quot;)
+plt.axis(&quot;off&quot;)
+plt.show()
 </code></pre>
 
-<p>Rumus TF IDF sendiri hanya <code>tfidf = bow * idf</code> , dimana nilai IDF didapatkan dari perhitungan <code>1 + log10(total_doc/(1+i))</code></p>
-<p>Lalu hasil perhitungan dieksport ke dalam bentuk CSV menggunakan program berikut:</p>
-<pre><code class="python">with open('tfidfsinopsis.csv', mode='w') as employee_file:
-    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='&quot;', quoting=csv.QUOTE_MINIMAL)
-    employee_writer.writerow(katadasar)
-    for i in tfidf:
-        employee_writer.writerow(i)
-</code></pre>
+<p>Graph yang terbentuk dari website http://teknik.trunojoyo.ac.id/</p>
+<p><img alt="graph" src="C:\Users\asus\AppData\Local\Programs\Python\Python35\my-project\docs\img\graph.PNG" /></p>
+<p>Sumber: <a href="https://id.wikipedia.org/wiki/Teori_graf">https://id.wikipedia.org/wiki/Teori_graf</a></p>
                 
                   
                 
@@ -456,7 +429,7 @@ with open('tfidfsinopsis.csv', mode='w') as employee_file:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../viesem/" title="VSM" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Crawling/" title="Crawling" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -465,19 +438,19 @@ with open('tfidfsinopsis.csv', mode='w') as employee_file:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                VSM
+                Crawling
               </span>
             </div>
           </a>
         
         
-          <a href="../seleksifitur/" title="Seleksi Fitur" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../PageRank/" title="PageRank" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Seleksi Fitur
+                PageRank
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

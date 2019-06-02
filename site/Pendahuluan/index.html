@@ -36,7 +36,7 @@
     
     
       
-        <title>TFxIDF - Nisa Desiana Web Crawling</title>
+        <title>Pendahuluan - Nisa Desiana Web Crawling</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tf-x-idf" tabindex="1" class="md-skip">
+      <a href="#web-structure-mining" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -100,7 +100,7 @@
               Nisa Desiana Web Crawling
             </span>
             <span class="md-header-nav__topic">
-              TFxIDF
+              Pendahuluan
             </span>
           
         </div>
@@ -166,12 +166,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Web Content Mining
@@ -235,20 +233,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="TFxIDF" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../tfidf/" title="TFxIDF" class="md-nav__link">
       TFxIDF
     </a>
-    
   </li>
 
         
@@ -297,10 +286,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Web Structure Mining
@@ -316,11 +307,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Pendahuluan/" title="Pendahuluan" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Pendahuluan" class="md-nav__link md-nav__link--active">
       Pendahuluan
     </a>
+    
   </li>
 
         
@@ -393,49 +393,24 @@
               
                 
                 
-                <h1 id="tf-x-idf">TF x IDF</h1>
-<p>TF IDF merupakan dua statistik data yang terdiri dari <em>Term-Frequency</em> dan <em>Inverse Data-Frequency</em>. Rumus TF-IDF sendiri terbilang mudah karena hanya TFxIDF.</p>
+                <h1 id="web-structure-mining">Web Structure Mining</h1>
+<p>​   Web Structure Mining atau dalam Bahasa adalah Penambangan struktur web menggunakan teori grafik untuk menganalisis node dan struktur koneksi situs web. Menurut jenis data struktur web, penambangan struktur web dapat dibagi menjadi dua jenis:</p>
 <ol>
-<li>Menghitung TF</li>
+<li>Mengekstraksi pola dari hyperlink di web: hyperlink adalah komponen struktural yang menghubungkan halaman web ke lokasi yang berbeda.</li>
+<li>Menambang struktur dokumen: analisis struktur struktur halaman seperti pohon untuk menggambarkan penggunaan tag HTML atau XML.</li>
 </ol>
-<p>TF sama dengan VSM yaitu menghitung frekuensi kemunculan kata pada setiap data.</p>
-<ol>
-<li>Menghitung IDF</li>
-</ol>
-<p>Nilai kemunculan tiap kata (fitur) berapa kali dalam semua data.</p>
-<pre><code class="python">df = list()
-total_doc = bow.shape[0]
-for kolom in range(len(bow[0])):
-    total = 0
-    for baris in range(len(bow)):
-        if (bow[baris, kolom] &gt; 0):
-            total +=1
-    df.append(total)
-df = np.array(df)
-
-idf = list()
-for i in df:
-    tmp = 1 + log10(total_doc/(1+i))
-    idf.append(tmp)
-idf = np.array(idf)
-
-tfidf = bow * idf
-
-with open('tfidfsinopsis.csv', mode='w') as employee_file:
-    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='&quot;', quoting=csv.QUOTE_MINIMAL)
-    employee_writer.writerow(katadasar)
-    for i in tfidf:
-        employee_writer.writerow(i)
-</code></pre>
-
-<p>Rumus TF IDF sendiri hanya <code>tfidf = bow * idf</code> , dimana nilai IDF didapatkan dari perhitungan <code>1 + log10(total_doc/(1+i))</code></p>
-<p>Lalu hasil perhitungan dieksport ke dalam bentuk CSV menggunakan program berikut:</p>
-<pre><code class="python">with open('tfidfsinopsis.csv', mode='w') as employee_file:
-    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='&quot;', quoting=csv.QUOTE_MINIMAL)
-    employee_writer.writerow(katadasar)
-    for i in tfidf:
-        employee_writer.writerow(i)
-</code></pre>
+<p>Terminologi penambangan struktur web:</p>
+<ul>
+<li>grafik web: grafik diarahkan mewakili web.</li>
+<li>simpul: halaman web dalam grafik.</li>
+<li>edge: hyperlinks.</li>
+<li>dalam derajat: jumlah link yang menunjuk ke simpul tertentu.</li>
+<li>derajat keluar: jumlah link yang dihasilkan dari simpul tertentu.</li>
+</ul>
+<p>Teknik penambangan struktur web:</p>
+<ul>
+<li>PageRank : algoritma ini digunakan oleh Google untuk memberi peringkat hasil pencarian. Nama algoritma ini diberikan oleh pendiri Google Larry Page. Peringkat halaman ditentukan oleh jumlah tautan yang menunjuk ke node target.</li>
+</ul>
                 
                   
                 
@@ -456,7 +431,7 @@ with open('tfidfsinopsis.csv', mode='w') as employee_file:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../viesem/" title="VSM" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../kesimpulan/" title="Kesimpulan" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -465,19 +440,19 @@ with open('tfidfsinopsis.csv', mode='w') as employee_file:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                VSM
+                Kesimpulan
               </span>
             </div>
           </a>
         
         
-          <a href="../seleksifitur/" title="Seleksi Fitur" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Crawling/" title="Crawling" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Seleksi Fitur
+                Crawling
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

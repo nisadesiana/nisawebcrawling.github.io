@@ -166,6 +166,27 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Web Content Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Web Content Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
     <a href=".." title="Perkenalan" class="md-nav__link">
@@ -173,10 +194,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -185,10 +206,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -197,10 +218,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -209,10 +230,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -221,10 +242,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -233,10 +254,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
   
 
@@ -283,16 +304,93 @@
     
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
     <a href="../kesimpulan/" title="Kesimpulan" class="md-nav__link">
       Kesimpulan
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Web Structure Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Web Structure Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pendahuluan/" title="Pendahuluan" class="md-nav__link">
+      Pendahuluan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Crawling/" title="Crawling" class="md-nav__link">
+      Crawling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Graph/" title="Graph" class="md-nav__link">
+      Graph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PageRank/" title="PageRank" class="md-nav__link">
+      PageRank
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -344,12 +442,22 @@
 <p>Clustering adalah metode penganalisaan data, yang sering dimasukkan sebagai salah satu metode <em>Data Mining</em>, yang tujuannya adalah untuk mengelompokkan data dengan karakteristik yang sama ke suatu ‘wilayah’ yang sama dan data dengan karakteristik yang berbeda ke ‘wilayah’ yang lain.</p>
 <p>Salah satu metode yang banyak digunakan dalam melakukan clustering dengan partisi ini adalah metode k-means. Secara umum metode k-means ini melakukan proses pengelompokan dengan prosedur sebagai berikut:</p>
 <ul>
-<li>Tentukan jumlah klaster yang ingin dibentuk dan tetapkan pusat cluster k.</li>
-<li>Menggunakan jarak euclidean kemudian hitung setiap data ke pusat cluster<img alt="img rumus euclid" src="https://ibara99.github.io/Simple%20Web%20Crawler/img/rumus_euclidean.PNG" /></li>
-<li>Kelompokkan data ke dalam cluster dengan jarak yang paling pendek dengan persamaan<img alt="rumus minimal" src="https://ibara99.github.io/Simple%20Web%20Crawler/img/rumus_minimal.PNG" /></li>
+<li>
+<p>Tentukan jumlah klaster yang ingin dibentuk dan tetapkan pusat cluster k.</p>
+</li>
+<li>
+<p>Menggunakan jarak euclidean kemudian hitung setiap data ke pusat cluster</p>
+</li>
+</ul>
+<p><img alt="rumus_euclidean" src="C:\Users\asus\AppData\Local\Programs\Python\Python35\my-project\docs\img\rumus_euclidean.PNG" /></p>
+<ul>
+<li>Kelompokkan data ke dalam cluster dengan jarak yang paling pendek dengan persamaan</li>
+</ul>
+<p><img alt="rumus_minimal" src="C:\Users\asus\AppData\Local\Programs\Python\Python35\my-project\docs\img\rumus_minimal.PNG" /></p>
+<ul>
 <li>Hitung pusat cluster yang baru menggunakan persamaan</li>
 </ul>
-<p><img alt="rumus pusat cluster" src="https://ibara99.github.io/Simple%20Web%20Crawler/img/rumus_pusat_cluster.PNG" /></p>
+<p><img alt="rumus_pusat_cluster" src="C:\Users\asus\AppData\Local\Programs\Python\Python35\my-project\docs\img\rumus_pusat_cluster.PNG" /></p>
 <p>Dengan : Xij Kluster ke k p = banyaknya anggota kluster ke - k</p>
 <p>Code Program:</p>
 <pre><code>kmeans = KMeans(n_clusters=3, random_state=0).fit(fiturBaru)
